@@ -56,7 +56,7 @@
    async mediaURL(name){return URL.createObjectURL(await (await vd.response(name)).blob());}
   };
   window.VD=vd;
-  const file=game?'game-v2.bin':'home-v2.bin';
+  const file=game?'game-v2.bin':'home-voice.bin';
   const label=game?'Загружаем ангар':'Загружаем сайт';
   notice.textContent=label+'…';
   const bundle=JSON.parse(decoder.decode(await load(file,file,null,(n,total)=>{
