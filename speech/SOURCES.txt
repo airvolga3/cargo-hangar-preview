@@ -1,0 +1,5 @@
+Browser speech recognition uses @fugood/node-whisper-wasm 1.2.0-rc.2 (MIT), single-threaded CPU build.
+https://github.com/whisper-node/whisper.node
+Whisper Base multilingual model by OpenAI (MIT), ggml Q5_1 conversion provided by ggerganov.
+https://huggingface.co/ggerganov/whisper.cpp/blob/main/ggml-base-q5_1.bin
+SHA-256 422f1ae452ade6f30a004d7e5c6a43195e4433bc370bf23fac9cc591f01a8898
