@@ -1,4 +1,4 @@
-(async()=>{
+async function openPreview(){
  const notice=document.getElementById('notice');
  const fragment=new URLSearchParams(location.hash.slice(1));
  const token=fragment.get('v');
@@ -15,8 +15,15 @@
   });
   registration.active.postMessage({token},[channel.port2]);
   await ready;
-  location.replace('./view/index.html');
+  const frame=document.createElement('iframe');
+  frame.title='Волга-Днепр — сайт с игрой';
+  frame.src='./view/index.html';
+  frame.allowFullscreen=true;
+  document.title='Волга-Днепр — грузовые авиаперевозки';
+  document.body.replaceChildren(frame);
  }catch{
   notice.textContent='Не удалось открыть сайт. Откройте полную ссылку в Safari, Chrome, Firefox или Edge и обновите страницу.';
  }
-})();
+}
+window.addEventListener('hashchange',()=>location.reload());
+openPreview();
